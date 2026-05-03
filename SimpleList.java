@@ -1,43 +1,43 @@
 // Name: Daniel Paek
 // Computing ID: jff7dm@virginia.edu
-// Homework Name: Homework 5 - Vectors
-// Resourced used: None
-package vector;
+// Homework Name: Implementing a Linked List-based Queue
+// Resources used: None
+package list;
 
 public interface SimpleList<T> {
 	
 	/**
-	 * Returns the number of items in this Vector
+	 * Returns the size of this list, i.e., the number of nodes currently between the head and tail
 	 * @return
 	 */
 	public int size();
 	
 	/**
-	 * Changes the Vector so that it contains zero items
+	 * Clears out the entire list
 	 */
-	public void clear();
+	public void clear() ;
 	
 	/**
-	 * Inserts new item at the end of the Vector
+	 * Inserts new data at the end of the list (i.e., just before the dummy tail node)
+	 * @param data
 	 */
-	public void insertAtTail(T item);
+	public void insertAtTail(T data);
 	
 	/**
-	 * Inserts item at the beginning of the Vector
-	 * @param item
+	 * Inserts data at the front of the list (i.e., just after the dummy head node
+	 * @param data
 	 */
-	public void insertAtHead(T item);
+	public void insertAtHead(T data);
 	
 	/**
-	 * Inserts item such that index becomes the position of the newly inserted item
-	 * @param item
+	 * Inserts node such that index becomes the position of the newly inserted data
+	 * @param data
 	 * @param index
 	 */
-	public void insertAt(int index, T item);
+	public void insertAt(int index, T data);
 	
 	/**
-	 * Remove item at start and end of Vector respectively (two separate methods),
-	 * returning the item that’s removed
+	 * Remove at tail and head respectively
 	 * @return
 	 */
 	public T removeAtTail();
@@ -45,14 +45,14 @@ public interface SimpleList<T> {
 	
 	
 	/**
-	 * Returns index of first occurrence of the item in the list, or -1 if not present
-	 * @param item
+	 * Returns index of first occurrence of the data in the list, or -1 if not present
+	 * @param data
 	 * @return
 	 */
-	public int find(T item);
+	public int find(T data);
 	
 	/**
-	 * Returns the item at the given index, null if anything goes wrong (index out of bounds, empty list, etc.)
+	 * Returns the data at the given index, null if anything goes wrong (index out of bounds, empty list, etc.)
 	 * @param index
 	 * @return
 	 */
